@@ -6,12 +6,13 @@ import {AuthContext} from "./Context/AuthProvider"
 
 
 
-function App() {
+const App = () => {
   // localStorage.clear();
   const [user, setUser] = useState(null);
   const [loggedInUserData, setLoggedInUserData] = useState(null);
 
   const authData = useContext(AuthContext);
+  // console.log(authData)
 
   useEffect(() => { // this useeffect checks the local storage loggedInUser when it reloads, it keeps the user logged in  
     const loggedInUser = localStorage.getItem('loggedInUser');
@@ -41,10 +42,10 @@ function App() {
     }
   }
   return (
-    <>
+    <div className="text-white">
       {!user ? <Login handleLogin={handleLogin}/> : ''}
-      {user=='admin'? <AdminDashboard/> : user == 'employee'? <EmployeeDashboard data={loggedInUserData} /> : null }
-    </>
+      {user=='admin'? <AdminDashboard /> : user == 'employee'? <EmployeeDashboard data={loggedInUserData} /> : null }
+    </div>
   )
 }
 

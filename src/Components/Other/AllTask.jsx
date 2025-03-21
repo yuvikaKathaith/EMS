@@ -1,55 +1,32 @@
-import React from 'react'
+import React, { useContext } from "react";
+import { AuthContext } from "../../Context/AuthProvider";
 
 const AllTask = () => {
-  return (
-    <div id='tasklist' className='bg-[#1c1c1c] p-5 rounded m-9 h-52 overflow-auto'>
-        <div className='bg-red-400 mb-2 py-2 px-4 flex justify-between rounded-lg'>
-            <h2>Yuvika</h2>
-            <h3>Make a UI Design</h3>
-            <h5>Status</h5>
-        </div>
-        <div className='bg-blue-400 mb-2 py-2 px-4 flex justify-between rounded-lg'>
-            <h2>Yuvika</h2>
-            <h3>Make a UI Design</h3>
-            <h5>Status</h5>
-        </div>
-        <div className='bg-pink-400 mb-2 py-2 px-4 flex justify-between rounded-lg'>
-            <h2>Yuvika</h2>
-            <h3>Make a UI Design</h3>
-            <h5>Status</h5>
-        </div>
-        <div className='bg-purple-400 mb-2 py-2 px-4 flex justify-between rounded-lg'>
-            <h2>Yuvika</h2>
-            <h3>Make a UI Design</h3>
-            <h5>Status</h5>
-        </div>
-        <div className='bg-green-400 mb-2 py-2 px-4 flex justify-between rounded-lg'>
-            <h2>Yuvika</h2>
-            <h3>Make a UI Design</h3>
-            <h5>Status</h5>
-        </div>
-        <div className='bg-yellow-400 mb-2 py-2 px-4 flex justify-between rounded-lg'>
-            <h2>Yuvika</h2>
-            <h3>Make a UI Design</h3>
-            <h5>Status</h5>
-        </div>
-        <div className='bg-violet-400 mb-2 py-2 px-4 flex justify-between rounded-lg'>
-            <h2>Yuvika</h2>
-            <h3>Make a UI Design</h3>
-            <h5>Status</h5>
-        </div>
-        <div className='bg-red-950 mb-2 py-2 px-4 flex justify-between rounded-lg'>
-            <h2>Yuvika</h2>
-            <h3>Make a UI Design</h3>
-            <h5>Status</h5>
-        </div>
-        <div className='bg-amber-600 mb-2 py-2 px-4 flex justify-between rounded-lg'>
-            <h2>Yuvika</h2>
-            <h3>Make a UI Design</h3>
-            <h5>Status</h5>
-        </div>
-    </div>
-  )
-}
+  const { empData } = useContext(AuthContext);
 
-export default AllTask
+  return (
+    <div className="bg-[#1c1c1c] p-5 rounded-lg m-9 text-lg font-medium">
+      <div className="bg-red-900 h-14 text-lg font-semibold py-2 px-4 flex justify-between items-center rounded-lg mb-3 sticky top-0 z-10">
+        <h2 className="w-1/5">Employee Name</h2>
+        <h3 className="w-1/5">New Task</h3>
+        <h5 className="w-1/5">Active Task</h5>
+        <h5 className="w-1/5">Completed</h5>
+        <h5 className="w-1/5">Failed</h5>
+      </div>
+
+      <div>
+        {empData.map((employee, idx) => (
+            <div key={idx} className="bg-black border-2 border-green-300 h-12 mb-2 text-md py-2 px-4 flex justify-between items-center rounded-lg">
+              <h2 className="w-1/5">{employee.firstName}</h2>
+              <h5 className="w-1/5 text-blue-400">{employee.taskCounts.newTask}</h5>
+              <h5 className="w-1/5 text-yellow-400">{employee.taskCounts.active}</h5>
+              <h5 className="w-1/5 text-green-400">{employee.taskCounts.completed}</h5>
+              <h5 className="w-1/5 text-red-400">{employee.taskCounts.failed}</h5>
+            </div>
+          ))}
+      </div>
+    </div>
+  );
+};
+
+export default AllTask;
