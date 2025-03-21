@@ -5,7 +5,7 @@ const AllTask = () => {
   const { empData } = useContext(AuthContext);
 
   return (
-    <div className="bg-[#1c1c1c] p-5 rounded-lg m-9 text-lg font-medium">
+    <div className="bg-[#1c1c1c] p-5 rounded-lg m-9 text-lg font-md">
       <div className="bg-red-900 h-14 text-lg font-semibold py-2 px-4 flex justify-between items-center rounded-lg mb-3 sticky top-0 z-10">
         <h2 className="w-1/5">Employee Name</h2>
         <h3 className="w-1/5">New Task</h3>
