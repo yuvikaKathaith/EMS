@@ -1,4 +1,4 @@
-// localStorage.clear();
+
 const employees = [
     {
         "id": 1,
@@ -9,7 +9,7 @@ const employees = [
         "tasks": [
             {
                 "taskTitle": "Design new feature",
-                "taskDescription": "Create mockups for the new feature",
+                "taskDescription": "Create mockups for the new feature.",
                 "taskDate": "2024-10-09",
                 "active": false, "newTask": false, "completed": true, "failed": false,
                 "color": "bg-red-400",
