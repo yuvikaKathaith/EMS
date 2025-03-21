@@ -5,42 +5,39 @@ const employees = [
         "firstName": "Arjun",
         "email": "e@e.com",
         "password": "123",
-        "taskCounts": {
-            "active": 2,
-            "newTask": 1,
-            "completed": 1,
-            "failed": 0
-        },
+        "taskCounts": { "active": 2, "newTask": 1, "completed": 1, "failed": 0 },
         "tasks": [
             {
-                "active": true,
-                "newTask": true,
-                "completed": false,
-                "failed": false,
-                "taskTitle": "Update website",
-                "taskDescription": "Revamp the homepage design",
-                "taskDate": "2024-10-12",
-                "category": "Design" 
+                "taskTitle": "Design new feature",
+                "taskDescription": "Create mockups for the new feature",
+                "taskDate": "2024-10-09",
+                "active": false, "newTask": false, "completed": true, "failed": false,
+                "color": "bg-red-400",
+                "priority": "High"
             },
             {
-                "active": false,
-                "newTask": false,
-                "completed": true,
-                "failed": false,
                 "taskTitle": "Client meeting",
                 "taskDescription": "Discuss project requirements",
                 "taskDate": "2024-10-10",
-                "category": "Meeting"
+                "active": false, "newTask": false, "completed": true, "failed": false,
+                "color": "bg-blue-400",
+                "priority": "Medium"
             },
             {
-                "active": true,
-                "newTask": false,
-                "completed": false,
-                "failed": false,
+                "taskTitle": "Design new feature",
+                "taskDescription": "Create mockups for the new feature",
+                "taskDate": "2024-10-09",
+                "active": false, "newTask": false, "completed": true, "failed": false,
+                "color": "bg-orange-400",
+                "priority": "Low"
+            },
+            {
                 "taskTitle": "Fix bugs",
                 "taskDescription": "Resolve bugs reported in issue tracker",
                 "taskDate": "2024-10-14",
-                "category": "Development"
+                "active": true, "newTask": false, "completed": false, "failed": false,
+                "color": "bg-green-400",
+                "priority": "High"
             }
         ]
     },
@@ -49,32 +46,39 @@ const employees = [
         "firstName": "Sneha",
         "email": "employee2@example.com",
         "password": "123",
-        "taskCounts": {
-            "active": 1,
-            "newTask": 0,
-            "completed": 1,
-            "failed": 0
-        },
+        "taskCounts": { "active": 1, "newTask": 0, "completed": 1, "failed": 0 },
         "tasks": [
             {
-                "active": true,
-                "newTask": false,
-                "completed": false,
-                "failed": false,
+                "taskTitle": "Code review",
+                "taskDescription": "Review the codebase for optimization",
+                "taskDate": "2024-10-12",
+                "active": true, "newTask": false, "completed": false, "failed": false,
+                "color": "bg-purple-400",
+                "priority": "Medium"
+            },
+            {
+                "taskTitle": "Client feedback",
+                "taskDescription": "Gather feedback from clients after product launch",
+                "taskDate": "2024-10-12",
+                "active": true, "newTask": false, "completed": false, "failed": false,
+                "color": "bg-sky-400",
+                "priority": "Medium"
+            },
+            {
                 "taskTitle": "Database optimization",
                 "taskDescription": "Optimize queries for better performance",
                 "taskDate": "2024-10-11",
-                "category": "Database"
+                "active": true, "newTask": false, "completed": false, "failed": false,
+                "color": "bg-yellow-400",
+                "priority": "High"
             },
             {
-                "active": false,
-                "newTask": false,
-                "completed": true,
-                "failed": false,
                 "taskTitle": "Design new feature",
                 "taskDescription": "Create mockups for the new feature",
                 "taskDate": "2024-10-09",
-                "category": "Design"
+                "active": false, "newTask": false, "completed": true, "failed": false,
+                "color": "bg-orange-400",
+                "priority": "Low"
             }
         ]
     },
@@ -83,42 +87,38 @@ const employees = [
         "firstName": "Ravi",
         "email": "employee3@example.com",
         "password": "123",
-        "taskCounts": {
-            "active": 4,
-            "newTask": 3,
-            "completed": 1,
-            "failed": 9
-        },
+        "taskCounts": { "active": 4, "newTask": 3, "completed": 1, "failed": 9 },
         "tasks": [
             {
-                "active": true,
-                "newTask": true,
-                "completed": false,
-                "failed": false,
                 "taskTitle": "Prepare presentation",
                 "taskDescription": "Prepare slides for upcoming client presentation",
                 "taskDate": "2024-10-13",
-                "category": "Presentation"
+                "active": true, "newTask": true, "completed": false, "failed": false,
+                "color": "bg-pink-400",
+                "priority": "High"
             },
             {
-                "active": true,
-                "newTask": false,
-                "completed": false,
-                "failed": false,
                 "taskTitle": "Code review",
                 "taskDescription": "Review the codebase for optimization",
                 "taskDate": "2024-10-12",
-                "category": "Development"
+                "active": true, "newTask": false, "completed": false, "failed": false,
+                "color": "bg-teal-400",
+                "priority": "Medium"
             },
             {
-                "active": false,
-                "newTask": false,
-                "completed": true,
-                "failed": false,
                 "taskTitle": "Testing",
                 "taskDescription": "Test the latest build for bugs",
                 "taskDate": "2024-10-08",
-                "category": "QA"
+                "active": false, "newTask": false, "completed": true, "failed": false,
+                "color": "bg-gray-400",
+                "priority": "Low"
+            },{
+                "taskTitle": "Design new feature",
+                "taskDescription": "Create mockups for the new feature",
+                "taskDate": "2024-10-09",
+                "active": false, "newTask": false, "completed": true, "failed": false,
+                "color": "bg-orange-400",
+                "priority": "Low"
             }
         ]
     },
@@ -127,32 +127,47 @@ const employees = [
         "firstName": "Priya",
         "email": "employee4@example.com",
         "password": "123",
-        "taskCounts": {
-            "active": 10,
-            "newTask": 3,
-            "completed": 7,
-            "failed": 4
-        },
+        "taskCounts": { "active": 10, "newTask": 3, "completed": 7, "failed": 4 },
         "tasks": [
             {
-                "active": true,
-                "newTask": true,
-                "completed": false,
-                "failed": false,
                 "taskTitle": "Write documentation",
                 "taskDescription": "Update the project documentation",
                 "taskDate": "2024-10-13",
-                "category": "Documentation"
+                "active": true, "newTask": true, "completed": false, "failed": false,
+                "color": "bg-indigo-400",
+                "priority": "Medium"
             },
             {
-                "active": true,
-                "newTask": false,
-                "completed": false,
-                "failed": false,
+                "taskTitle": "Design new feature",
+                "taskDescription": "Create mockups for the new feature",
+                "taskDate": "2024-10-09",
+                "active": false, "newTask": false, "completed": true, "failed": false,
+                "color": "bg-orange-400",
+                "priority": "Low"
+            },
+            {
                 "taskTitle": "Set up CI/CD",
                 "taskDescription": "Implement continuous integration pipeline",
                 "taskDate": "2024-10-11",
-                "category": "DevOps"
+                "active": true, "newTask": false, "completed": false, "failed": false,
+                "color": "bg-cyan-400",
+                "priority": "High"
+            },
+            {
+                "taskTitle": "Design new feature",
+                "taskDescription": "Create mockups for the new feature",
+                "taskDate": "2024-10-09",
+                "active": false, "newTask": false, "completed": true, "failed": false,
+                "color": "bg-lime-400",
+                "priority": "Low"
+            },
+            {
+                "taskTitle": "Client meeting",
+                "taskDescription": "Discuss project requirements",
+                "taskDate": "2024-10-10",
+                "active": false, "newTask": false, "completed": true, "failed": false,
+                "color": "bg-rose-400",
+                "priority": "Medium"
             }
         ]
     },
@@ -161,46 +176,61 @@ const employees = [
         "firstName": "Karan",
         "email": "employee5@example.com",
         "password": "123",
-        "taskCounts": {
-            "active": 2,
-            "newTask": 12,
-            "completed": 10,
-            "failed": 2
-        },
+        "taskCounts": { "active": 2, "newTask": 12, "completed": 10, "failed": 2 },
         "tasks": [
             {
-                "active": true,
-                "newTask": true,
-                "completed": false,
-                "failed": false,
+                "taskTitle": "Client meeting",
+                "taskDescription": "Discuss project requirements",
+                "taskDate": "2024-10-10",
+                "active": false, "newTask": false, "completed": true, "failed": false,
+                "color": "bg-fuchsia-400",
+                "priority": "Low"
+            },
+            {
                 "taskTitle": "UI redesign",
                 "taskDescription": "Redesign the user interface for better UX",
                 "taskDate": "2024-10-14",
-                "category": "Design"
+                "active": true, "newTask": true, "completed": false, "failed": false,
+                "color": "bg-violet-400",
+                "priority": "High"
             },
             {
-                "active": false,
-                "newTask": false,
-                "completed": true,
-                "failed": false,
                 "taskTitle": "Deploy new build",
                 "taskDescription": "Deploy the latest build to production",
                 "taskDate": "2024-10-09",
-                "category": "DevOps"
+                "active": false, "newTask": false, "completed": true, "failed": false,
+                "color": "bg-amber-400",
+                "priority": "Medium"
             },
             {
-                "active": true,
-                "newTask": false,
-                "completed": false,
-                "failed": false,
+                "taskTitle": "Design new feature",
+                "taskDescription": "Create mockups for the new feature",
+                "taskDate": "2024-10-09",
+                "active": false, "newTask": false, "completed": true, "failed": false,
+                "color": "bg-orange-400",
+                "priority": "Low"
+            },
+            {
+                "taskTitle": "Design new feature",
+                "taskDescription": "Create mockups for the new feature",
+                "taskDate": "2024-10-09",
+                "active": false, "newTask": false, "completed": true, "failed": false,
+                "color": "bg-emerald-400",
+                "priority": "Low"
+            },
+            {
                 "taskTitle": "Client feedback",
                 "taskDescription": "Gather feedback from clients after product launch",
                 "taskDate": "2024-10-12",
-                "category": "Support"
+                "active": true, "newTask": false, "completed": false, "failed": false,
+                "color": "bg-sky-400",
+                "priority": "Medium"
             }
         ]
     }
 ];
+
+
 
 const admin = [{
   "id": 1,

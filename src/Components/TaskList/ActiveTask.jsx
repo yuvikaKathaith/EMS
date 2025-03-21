@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NewTask = () => {
+const ActiveTask = () => {
   return (
     <div className="bg-red-400 text-white w-[300px] h-[300px] p-4 rounded-lg shrink-0">
         <div className="flex flex-row justify-between">
@@ -13,11 +13,12 @@ const NewTask = () => {
             <h1 className="text-2xl font-bold">Submit Report</h1>
             <p className="text-sm mt-3">Complete and submit the monthly financial report.</p>
         </div>
-        <div className='mt-6 flex items-center justify-center '>
-            <button className='bg-blue-500 rounded font-medium py-1 px-2 text-xs'>Active Task</button>
+        <div className='flex justify-between mt-6 '>
+            <button className='bg-green-500 rounded font-medium py-1 px-2 text-xs'>Mark as Completed</button>
+            <button className='bg-red-500 rounded font-medium py-1 px-2 text-xs'>Mark as Failed</button>
         </div>
     </div>
   )
 }
 
-export default NewTask
+export default ActiveTask
