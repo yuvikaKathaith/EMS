@@ -11,7 +11,6 @@ const employees = [
                 "taskDescription": "Create mockups for the new feature.",
                 "taskDate": "2024-10-09",
                 "active": false, "newTask": false, "completed": true, "failed": false,
-                "color": "bg-red-400",
                 "priority": "High"
             },
             {
@@ -19,7 +18,6 @@ const employees = [
                 "taskDescription": "Discuss project requirements",
                 "taskDate": "2024-10-10",
                 "active": false, "newTask": false, "completed": true, "failed": false,
-                "color": "bg-blue-400",
                 "priority": "Medium"
             },
             {
@@ -27,7 +25,6 @@ const employees = [
                 "taskDescription": "Create mockups for the new feature",
                 "taskDate": "2024-10-09",
                 "active": false, "newTask": false, "completed": true, "failed": false,
-                "color": "bg-orange-400",
                 "priority": "Low"
             },
             {
@@ -35,7 +32,6 @@ const employees = [
                 "taskDescription": "Resolve bugs reported in issue tracker",
                 "taskDate": "2024-10-14",
                 "active": true, "newTask": false, "completed": false, "failed": false,
-                "color": "bg-green-400",
                 "priority": "High"
             }
         ]
@@ -52,7 +48,6 @@ const employees = [
                 "taskDescription": "Review the codebase for optimization",
                 "taskDate": "2024-10-12",
                 "active": true, "newTask": false, "completed": false, "failed": false,
-                "color": "bg-purple-400",
                 "priority": "Medium"
             },
             {
@@ -60,7 +55,6 @@ const employees = [
                 "taskDescription": "Gather feedback from clients after product launch",
                 "taskDate": "2024-10-12",
                 "active": true, "newTask": false, "completed": false, "failed": false,
-                "color": "bg-sky-400",
                 "priority": "Medium"
             },
             {
@@ -68,7 +62,6 @@ const employees = [
                 "taskDescription": "Optimize queries for better performance",
                 "taskDate": "2024-10-11",
                 "active": true, "newTask": false, "completed": false, "failed": false,
-                "color": "bg-yellow-400",
                 "priority": "High"
             },
             {
@@ -76,7 +69,6 @@ const employees = [
                 "taskDescription": "Create mockups for the new feature",
                 "taskDate": "2024-10-09",
                 "active": false, "newTask": false, "completed": true, "failed": false,
-                "color": "bg-orange-400",
                 "priority": "Low"
             }
         ]
@@ -93,7 +85,6 @@ const employees = [
                 "taskDescription": "Prepare slides for upcoming client presentation",
                 "taskDate": "2024-10-13",
                 "active": true, "newTask": true, "completed": false, "failed": false,
-                "color": "bg-pink-400",
                 "priority": "High"
             },
             {
@@ -101,7 +92,6 @@ const employees = [
                 "taskDescription": "Review the codebase for optimization",
                 "taskDate": "2024-10-12",
                 "active": true, "newTask": false, "completed": false, "failed": false,
-                "color": "bg-teal-400",
                 "priority": "Medium"
             },
             {
@@ -109,14 +99,12 @@ const employees = [
                 "taskDescription": "Test the latest build for bugs",
                 "taskDate": "2024-10-08",
                 "active": false, "newTask": false, "completed": true, "failed": false,
-                "color": "bg-gray-400",
                 "priority": "Low"
             },{
                 "taskTitle": "Design new feature",
                 "taskDescription": "Create mockups for the new feature",
                 "taskDate": "2024-10-09",
                 "active": false, "newTask": false, "completed": true, "failed": false,
-                "color": "bg-orange-400",
                 "priority": "Low"
             }
         ]
@@ -133,7 +121,6 @@ const employees = [
                 "taskDescription": "Update the project documentation",
                 "taskDate": "2024-10-13",
                 "active": true, "newTask": true, "completed": false, "failed": false,
-                "color": "bg-indigo-400",
                 "priority": "Medium"
             },
             {
@@ -141,7 +128,6 @@ const employees = [
                 "taskDescription": "Create mockups for the new feature",
                 "taskDate": "2024-10-09",
                 "active": false, "newTask": false, "completed": true, "failed": false,
-                "color": "bg-orange-400",
                 "priority": "Low"
             },
             {
@@ -149,7 +135,6 @@ const employees = [
                 "taskDescription": "Implement continuous integration pipeline",
                 "taskDate": "2024-10-11",
                 "active": true, "newTask": false, "completed": false, "failed": false,
-                "color": "bg-cyan-400",
                 "priority": "High"
             },
             {
@@ -157,7 +142,6 @@ const employees = [
                 "taskDescription": "Create mockups for the new feature",
                 "taskDate": "2024-10-09",
                 "active": false, "newTask": false, "completed": true, "failed": false,
-                "color": "bg-lime-400",
                 "priority": "Low"
             },
             {
@@ -165,7 +149,6 @@ const employees = [
                 "taskDescription": "Discuss project requirements",
                 "taskDate": "2024-10-10",
                 "active": false, "newTask": false, "completed": true, "failed": false,
-                "color": "bg-rose-400",
                 "priority": "Medium"
             }
         ]
@@ -182,7 +165,6 @@ const employees = [
                 "taskDescription": "Discuss project requirements",
                 "taskDate": "2024-10-10",
                 "active": false, "newTask": false, "completed": true, "failed": false,
-                "color": "bg-fuchsia-400",
                 "priority": "Low"
             },
             {
@@ -190,7 +172,6 @@ const employees = [
                 "taskDescription": "Redesign the user interface for better UX",
                 "taskDate": "2024-10-14",
                 "active": true, "newTask": true, "completed": false, "failed": false,
-                "color": "bg-violet-400",
                 "priority": "High"
             },
             {
@@ -198,7 +179,6 @@ const employees = [
                 "taskDescription": "Deploy the latest build to production",
                 "taskDate": "2024-10-09",
                 "active": false, "newTask": false, "completed": true, "failed": false,
-                "color": "bg-amber-400",
                 "priority": "Medium"
             },
             {
@@ -206,7 +186,6 @@ const employees = [
                 "taskDescription": "Create mockups for the new feature",
                 "taskDate": "2024-10-09",
                 "active": false, "newTask": false, "completed": true, "failed": false,
-                "color": "bg-orange-400",
                 "priority": "Low"
             },
             {
@@ -214,7 +193,6 @@ const employees = [
                 "taskDescription": "Create mockups for the new feature",
                 "taskDate": "2024-10-09",
                 "active": false, "newTask": false, "completed": true, "failed": false,
-                "color": "bg-emerald-400",
                 "priority": "Low"
             },
             {
@@ -222,7 +200,6 @@ const employees = [
                 "taskDescription": "Gather feedback from clients after product launch",
                 "taskDate": "2024-10-12",
                 "active": true, "newTask": false, "completed": false, "failed": false,
-                "color": "bg-sky-400",
                 "priority": "Medium"
             }
         ]

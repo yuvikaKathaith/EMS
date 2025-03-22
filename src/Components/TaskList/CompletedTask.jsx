@@ -5,7 +5,7 @@ const CompletedTask = ({task}) => {
     <div className="bg-transparent border-2 border-green-600 text-white w-[500px] h-[300px] p-4 rounded-lg shrink-0">
         <div className="flex flex-row justify-between">
             <h1 className="bg-red-700 font-semibold text-white h-7 text-sm w-16 flex justify-center items-center rounded-lg">
-                {task.priority}
+                {task.priority || "High"}
             </h1>
             <h1 className="font-semibold">{task.taskDate}</h1>
         </div>
