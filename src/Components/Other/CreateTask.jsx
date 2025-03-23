@@ -1,29 +1,40 @@
-import React, { useState } from 'react'
-import { getLocalStorage } from '../../utils/localStorage';
+import React, { useContext, useState } from 'react'
+import { AuthContext } from '../../Context/AuthProvider';
 
 const CreateTask = () => {
   const [taskTitle, setTaskTitle] = useState('');
   const [taskDate, setTaskDate] = useState('');
-  const [asignTo, setAssignTo] = useState('');
+  const [assignTo, setAssignTo] = useState('');
   const [category, setCategory] = useState('');
   const [taskDescription, setTaskDescription] = useState('');
 
-  const [task, setTask] = useState({});
+  const [authData, setAuthData] = useContext(AuthContext)
 
   const handleCreateTask = (e) => {
-      e.preventDefault()
-      setTaskTitle('')
-      setTaskDate('')
-      setAssignTo('')
-      setCategory('')
-      setTaskDescription('')
+    e.preventDefault()
 
-      setTask({taskTitle, taskDate, asignTo, category, taskDescription, active: false, newTask: true, failed: false, completed: false})
-      // console.log(task);
+    const newTask = {taskTitle, taskDate, assignTo, category, taskDescription, active: false, newTask: true, failed: false, completed: false}
 
-      const data = getLocalStorage('empData');
-      console.log(data)
-  }
+    const data = authData
+
+    data.forEach((employee) => {
+      if (employee.firstName.toLowerCase() === assignTo.toLowerCase()) {
+        employee.tasks.push(newTask);
+        console.log("Updated tasks:", employee.tasks);
+      }
+    });
+
+    setAuthData(data);
+
+    localStorage.setItem("employees", JSON.stringify(data));
+
+    setTaskTitle('');
+    setTaskDate('');
+    setAssignTo('');
+    setCategory('');
+    setTaskDescription('');
+};
+
 
   return (
     <div className='bg-[#1c1c1c] m-9 -mt-3 p-5 rounded-lg'>
@@ -34,6 +45,7 @@ const CreateTask = () => {
               <div>
                 <h1 className='mb-1'>Task Title</h1>
                 <input 
+                  required
                   value={taskTitle}
                   onChange={(e) => {
                     setTaskTitle(e.target.value)
@@ -57,7 +69,8 @@ const CreateTask = () => {
               <div>
                 <h1 className='mb-1'>Assign To</h1>
                 <input 
-                  value={asignTo}
+                  required
+                  value={assignTo}
                   onChange={(e) => {
                     setAssignTo(e.target.value);
                   }}
