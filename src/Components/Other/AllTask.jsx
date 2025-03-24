@@ -3,6 +3,7 @@ import { AuthContext } from "../../Context/AuthProvider";
 
 const AllTask = () => {
   const [userData, setUserData] =  useContext(AuthContext)
+  // console.log(userData)
 
   return (
     <div className="bg-[#1c1c1c] p-5 rounded-lg m-9 text-lg font-md">
