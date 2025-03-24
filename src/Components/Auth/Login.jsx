@@ -84,23 +84,17 @@ const Login = ({ handleLogin }) => {
                   const emp = employees.find(emp => emp.id === parseInt(e.target.value));
                   setSelectedEmployee(emp);
                 }}
-              >
-                {employees.map((emp) => (
-                  <option key={emp.id} value={emp.id}>
-                    {emp.firstName}
-                  </option>
-                ))}
-              </select>
-              <button
-                type="button"
                 onClick={() => {
                   setEmail(selectedEmployee.email);
                   setPassword(selectedEmployee.password);
                 }}
-                className="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 rounded-lg"
               >
-                Guest Login (Employee: {selectedEmployee.firstName})
-              </button>
+                {employees.map((emp) => (
+                  <option key={emp.id} value={emp.id}>
+                    Guest Login as {emp.firstName}
+                  </option>
+                ))}
+              </select>
             </div>
           )}
         </div>
