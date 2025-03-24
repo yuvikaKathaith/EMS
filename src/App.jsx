@@ -12,7 +12,6 @@ const App = () => {
 
   const authData = useContext(AuthContext);
   // console.log(authData)
-
   useEffect(() => { // this useeffect checks the local storage loggedInUser when it reloads, it keeps the user logged in  
     const loggedInUser = localStorage.getItem('loggedInUser');
     if(loggedInUser){
