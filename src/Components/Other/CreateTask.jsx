@@ -8,25 +8,41 @@ const CreateTask = () => {
   const [category, setCategory] = useState('');
   const [taskDescription, setTaskDescription] = useState('');
 
-  const [authData, setAuthData] = useContext(AuthContext)
+  const [userData, setUserData] = useContext(AuthContext)
 
   const handleCreateTask = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    const newTask = {taskTitle, taskDate, assignTo, category, taskDescription, active: false, newTask: true, failed: false, completed: false}
+    const newTask = {
+        taskTitle,
+        taskDate,
+        assignTo,
+        category,
+        taskDescription,
+        active: false,
+        newTask: true,
+        failed: false,
+        completed: false
+    };
 
-    const data = authData
+    const updatedUserData = { ...userData };
 
-    data.forEach((employee) => {
-      if (employee.firstName.toLowerCase() === assignTo.toLowerCase()) {
-        employee.tasks.push(newTask);
-        console.log("Updated tasks:", employee.tasks);
-      }
+    updatedUserData.empData = updatedUserData.empData.map((employee) => {
+        if (employee.firstName.toLowerCase() === assignTo.toLowerCase()) {
+            return {
+                ...employee,
+                tasks: [...employee.tasks, newTask],
+                taskCounts: {
+                    ...employee.taskCounts,
+                    newTask: employee.taskCounts.newTask + 1 
+                }
+            };
+        }
+        return employee;
     });
 
-    setAuthData(data);
-
-    localStorage.setItem("employees", JSON.stringify(data));
+    setUserData(updatedUserData);
+    localStorage.setItem("userData", JSON.stringify(updatedUserData));
 
     setTaskTitle('');
     setTaskDate('');
@@ -34,7 +50,6 @@ const CreateTask = () => {
     setCategory('');
     setTaskDescription('');
 };
-
 
   return (
     <div className='bg-[#1c1c1c] m-9 -mt-3 p-5 rounded-lg'>

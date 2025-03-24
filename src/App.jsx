@@ -4,8 +4,6 @@ import AdminDashboard from "./Components/Dashboard/AdminDashboard"
 import EmployeeDashboard from "./Components/Dashboard/EmployeeDashboard"
 import {AuthContext} from "./Context/AuthProvider"
 
-
-
 const App = () => {
   // localStorage.clear();
   const [user, setUser] = useState(null);
@@ -29,7 +27,7 @@ const App = () => {
       localStorage.setItem('loggedInUser', JSON.stringify({role: 'admin'}));
     }
     else if(authData){
-      const employee = authData.empData.find((e) => email == e.email && password == e.password);
+      const employee = authData[0].empData.find((e) => email == e.email && password == e.password);
       if(employee){
         // console.log(employee);
         setUser('employee');
