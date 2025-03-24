@@ -51,46 +51,46 @@ const CreateTask = () => {
   };
 
   return (
-    <div className='bg-[#1c1c1c] m-9 -mt-3 p-5 rounded-lg'>
+    <div className='bg-white text-black m-9 -mt-3 p-5 rounded-lg text-md'>
       <form onSubmit={handleCreateTask} className='flex flex-row justify-between'>
         <div>
           <div>
-            <h1 className='mb-1'>Task Title</h1>
+            <h1 className='mb-1 font-semibold'>Task Title</h1>
             <input
               required
               value={taskTitle}
               onChange={(e) => setTaskTitle(e.target.value)}
-              className='mb-10 border border-gray-300 p-2 rounded-sm w-[600px] text-sm'
+              className='mb-10 border border-gray-600 p-2 rounded-sm w-[600px]'
               type='text'
               placeholder='For eg. Make a UI design'
             />
           </div>
           <div>
-            <h1 className='mb-1'>Date</h1>
+            <h1 className='mb-1 font-semibold'>Date</h1>
             <input
               value={taskDate}
               onChange={(e) => setTaskDate(e.target.value)}
-              className='mb-10 border border-gray-300 p-2 rounded-sm w-[600px] text-sm'
+              className='mb-10 border border-gray-600 p-2 rounded-sm w-[600px]'
               type='date'
             />
           </div>
           <div>
-            <h1 className='mb-1'>Assign To</h1>
+            <h1 className='mb-1 font-semibold'>Assign To</h1>
             <input
               required
               value={assignTo}
               onChange={(e) => setAssignTo(e.target.value)}
-              className='mb-10 border border-gray-300 p-2 rounded-sm w-[600px] text-sm'
+              className='mb-10 border border-gray-600 p-2 rounded-sm w-[600px]'
               type='text'
               placeholder='Employee name'
             />
           </div>
           <div>
-            <h1 className='mb-1'>Category</h1>
+            <h1 className='mb-1 font-semibold'>Category</h1>
             <input
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-              className='border border-gray-300 p-2 rounded-sm w-[600px] text-sm'
+              className='border border-gray-600 p-2 rounded-sm w-[600px]'
               type='text'
               placeholder='Design, Dev, etc.'
             />
@@ -98,15 +98,15 @@ const CreateTask = () => {
         </div>
         <div>
           <div>
-            <h1 className='mb-3 text-lg'>Description</h1>
+            <h1 className='mb-3 text-lg font-semibold'>Description</h1>
             <textarea
               value={taskDescription}
               onChange={(e) => setTaskDescription(e.target.value)}
-              className='border border-gray-300 mb-3 p-3 w-[600px] h-[200px] rounded-sm'
+              className='border border-gray-600 mb-3 p-3 w-[600px] h-[200px] rounded-sm'
               placeholder='For eg. Design a clean and modern user interface...'
             />
           </div>
-          <button className='w-[600px] h-10 rounded-sm text-center font-semibold bg-blue-500'>
+          <button className='w-[600px] h-10 rounded-sm text-center font-semibold bg-blue-500 shadow-2xl text-white'>
             Create Task
           </button>
         </div>
