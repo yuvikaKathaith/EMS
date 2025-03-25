@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaEnvelope, FaLock } from "react-icons/fa";
+import { FaEnvelope, FaLock, FaUser } from "react-icons/fa";
 
 const employees = [
   { id: 1, firstName: "Arjun", email: "e@e.com", password: "123" },
@@ -12,8 +12,9 @@ const employees = [
 const Login = ({ handleLogin }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   const [role, setRole] = useState("Employee");
-  const [selectedEmployee, setSelectedEmployee] = useState(employees[0]); // Default to first employee
+  const [selectedEmployee, setSelectedEmployee] = useState(employees[0]);
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -30,19 +31,25 @@ const Login = ({ handleLogin }) => {
           <div className="flex items-center mb-4">
             <span className="text-gray-500 mr-2">Login As:</span>
             <button
-              className={`mr-2 font-medium ${
-                role === "Employee" ? "border-b-4 border-amber-300 text-gray-600" : "text-gray-400"
+              className={`mr-2 font-medium ${role === "Employee" ? "border-b-4 border-amber-300 text-gray-600" : "text-gray-400"
               }`}
-              onClick={() => setRole("Employee")}
+              onClick={() => {
+                setEmail('')
+                setPassword('')
+                setRole("Employee")
+              }}
             >
               Employee
             </button>
             |
             <button
-              className={`ml-2 font-medium ${
-                role === "Admin" ? "border-b-4 border-amber-300 text-gray-600" : "text-gray-400"
+              className={`ml-2 font-medium ${role === "Admin" ? "border-b-4 border-amber-300 text-gray-600" : "text-gray-400"
               }`}
-              onClick={() => setRole("Admin")}
+              onClick={() => {
+                setEmail('')
+                setPassword('')
+                setRole("Admin")
+              }}
             >
               Admin
             </button>
@@ -96,6 +103,19 @@ const Login = ({ handleLogin }) => {
                 ))}
               </select>
             </div>
+          )}
+
+          {role === "Admin" && (
+            <button
+              onClick={() => {
+                setEmail("admin@me.com");
+                setPassword("123");
+                setRole("Admin");
+              }}
+              className="w-full border border-amber-300 bg-transparent text-black font-semibold py-2 rounded-lg mt-3"
+            >
+              Guest Login as Admin
+            </button>
           )}
         </div>
         <div className="w-1/2 bg-yellow-100 flex items-center justify-center">
