@@ -82,10 +82,10 @@ const Login = ({ handleLogin }) => {
             </button>
           </form>
           
-          {role === "Employee" && (
+          {role === "Employee"? (
             <div className="flex flex-col mt-3">
               <select
-                className="w-full mb-2 px-3 py-2 border border-gray-300 rounded-lg text-gray-700"
+                className="w-full mb-2 px-3 py-2 border border-yellow-400 rounded-lg text-gray-700"
                 value={selectedEmployee.id}
                 onChange={(e) => {
                   const emp = employees.find(emp => emp.id === parseInt(e.target.value));
@@ -98,14 +98,14 @@ const Login = ({ handleLogin }) => {
               >
                 {employees.map((emp) => (
                   <option key={emp.id} value={emp.id}>
-                    Guest Login as {emp.firstName}
+                    Guest Login as Employee {emp.id}
                   </option>
                 ))}
               </select>
             </div>
-          )}
-
-          {role === "Admin" && (
+          )
+          :
+          (
             <button
               onClick={() => {
                 setEmail("admin@me.com");
