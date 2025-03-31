@@ -251,3 +251,4 @@ export const getLocalStorage = () => {
 
     return {empData, adminData};
 }
+

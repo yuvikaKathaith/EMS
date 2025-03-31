@@ -51,7 +51,7 @@ const CreateTask = () => {
   };
 
   return (
-    <div className='bg-white text-black m-9 -mt-3 p-5 rounded-lg text-md'>
+    <div className='bg-white text-black m-9 -mt-3 p-5 rounded-lg text-md dark:bg-gray-900 dark:text-white'>
       <form onSubmit={handleCreateTask} className='flex flex-row justify-between'>
         <div>
           <div>
@@ -97,12 +97,12 @@ const CreateTask = () => {
           </div>
         </div>
         <div>
-          <div>
+          <div className='dark:bg-gray-900 dark:text-white'>
             <h1 className='mb-3 text-lg font-semibold'>Description</h1>
             <textarea
               value={taskDescription}
               onChange={(e) => setTaskDescription(e.target.value)}
-              className='border border-gray-600 mb-3 p-3 w-[600px] h-[200px] rounded-sm'
+              className='border border-gray-600 mb-3 p-3 w-[600px] h-[200px] rounded-sm text-gray-500 dark:text-white'
               placeholder='For eg. Design a clean and modern user interface...'
             />
           </div>

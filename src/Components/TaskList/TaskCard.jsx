@@ -6,7 +6,7 @@ import NewTask from './NewTask';
 
 const TaskCard = ({data}) => {
   return (
-    <div id="tasklist" className="bg-white p-10 flex flex-nowrap gap-6 justify-start h-full w-full overflow-x-auto">
+    <div id="tasklist" className="bg-white dark:bg-gray-900 p-10 flex flex-nowrap gap-6 justify-start h-full w-full overflow-x-auto">
       {data.tasks.map((task, idx) => {
           if(task.active) return <ActiveTask key={idx} task={task} />
           if(task.newTask) return <NewTask key={idx} task={task} />

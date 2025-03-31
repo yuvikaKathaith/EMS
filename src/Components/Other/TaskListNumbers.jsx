@@ -2,7 +2,7 @@ import React from 'react'
 
 const TaskListNumbers = ({ data }) => {
   return (
-    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-10 bg-white'>
+    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-10 bg-white dark:bg-gray-900'>
       <div className='bg-blue-100 text-blue-800 shadow-md rounded-xl p-6 text-center transform hover:scale-105 transition'>
         <h1 className='text-4xl font-bold'>{data.taskCounts.newTask}</h1>
         <h1 className='text-lg font-medium'>New Task</h1>
